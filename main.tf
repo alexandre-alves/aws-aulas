@@ -13,6 +13,8 @@ resource "aws_s3_bucket" "my-test-bucket" {
   tags = {
     Name        = "My bucket"
     Environment = "Dev"
-    Managedby   = "Terraform"
+    ManagedBy   = "Terraform"
+    Owner = "Alexandre"
+    UpdateAt = "2021-08-23"
   }
 }
