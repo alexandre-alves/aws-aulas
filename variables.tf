@@ -16,7 +16,7 @@ variable "aws_profile" {
 variable "instance_ami" {
   type        = string
   description = ""
-  # movido para arquivo de variaveis   default = "ami-0ee02acd56a52998e"
+  # movido para arquivo de variaveis   default = "ami-0ee02acd56a52998e" #Imagem ubuntu 16
 }
 variable "instance_type" {
   type        = string
