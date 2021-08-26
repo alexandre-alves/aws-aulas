@@ -1,10 +1,12 @@
 #Esta sendo criado um recurso S3 Bucket esse recurso dentro da estrutura do
 #Terraforme sera usado o nome my-teste-bucket
 resource "aws_s3_bucket" "my-test-bucket" {
-  bucket = "my-tf-test-bucket-xptobolinha322"
+  bucket = "${random_pet.bucket.id}-${var.environment}"
+#Criando bucket com nome:
+  #  bucket = "my-tf-test-bucket-xptobolinha322"
   acl    = "private"
   ##
-  tags = var.instance_tags
+  tags = local.common_tags
 
   #  tags = {
   #    Name        = "My bucket"
