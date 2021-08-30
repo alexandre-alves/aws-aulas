@@ -6,11 +6,12 @@ resource "aws_s3_bucket" "my-test-bucket" {
   #  bucket = "my-tf-test-bucket-xptobolinha322"
   acl = "private"
   tags = local.common_tags
-  resource "aws_s3_bucket_object" var.bucket{
-    bucket = aws_s3_bucket.bucket
-        key = "config/ips.json"
-        source = "ips.json"
-        etag =filemd5("ips.json")
+}
+resource  "aws_s3_bucket_object" "my-test-bucket" {
+    bucket = aws_s3_bucket.my-test-bucket.bucket
+        key = "config/${local.ip_filepath}"
+        source = local.ip_filepath
+        etag =filemd5(local.ip_filepath)
 
-  }
-  }
+
+}
