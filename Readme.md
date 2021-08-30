@@ -5,7 +5,7 @@ Producao e desenvolvimento com uso do tfvars
 ```
 prod.tfvars
 dev.auto.tfvars
-Variables e locals e random
+Variables,locals e random
 ```
 ### Variables
 
